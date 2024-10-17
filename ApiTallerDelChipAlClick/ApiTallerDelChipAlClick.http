@@ -1,0 +1,6 @@
+@ApiTallerDelChipAlClick_HostAddress = http://localhost:5008
+
+GET {{ApiTallerDelChipAlClick_HostAddress}}/weatherforecast/
+Accept: application/json
+
+###
