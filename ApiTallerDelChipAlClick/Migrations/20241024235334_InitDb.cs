@@ -17,7 +17,7 @@ namespace ApiTallerDelChipAlClick.Migrations
                     ModuleID = table.Column<int>(type: "int", nullable: false)
                         .Annotation("SqlServer:Identity", "1, 1"),
                     ModuleName = table.Column<string>(type: "nvarchar(max)", nullable: false),
-                    Temperature = table.Column<string>(type: "nvarchar(max)", nullable: false),
+                    Temperature = table.Column<string>(type: "nvarchar(max)", nullable: true),
                     IsActive = table.Column<bool>(type: "bit", nullable: false)
                 },
                 constraints: table =>
@@ -32,11 +32,26 @@ namespace ApiTallerDelChipAlClick.Migrations
                     LedID = table.Column<int>(type: "int", nullable: false)
                         .Annotation("SqlServer:Identity", "1, 1"),
                     LedName = table.Column<string>(type: "nvarchar(max)", nullable: false),
+                    Rooms = table.Column<string>(type: "nvarchar(max)", nullable: false),
                     IsActive = table.Column<bool>(type: "bit", nullable: false)
                 },
                 constraints: table =>
                 {
                     table.PrimaryKey("PK_Leds", x => x.LedID);
+                });
+
+            migrationBuilder.CreateTable(
+                name: "Users",
+                columns: table => new
+                {
+                    UserID = table.Column<int>(type: "int", nullable: false)
+                        .Annotation("SqlServer:Identity", "1, 1"),
+                    UserName = table.Column<string>(type: "nvarchar(max)", nullable: false),
+                    UserKey = table.Column<string>(type: "nvarchar(max)", nullable: false)
+                },
+                constraints: table =>
+                {
+                    table.PrimaryKey("PK_Users", x => x.UserID);
                 });
         }
 
@@ -48,6 +63,9 @@ namespace ApiTallerDelChipAlClick.Migrations
 
             migrationBuilder.DropTable(
                 name: "Leds");
+
+            migrationBuilder.DropTable(
+                name: "Users");
         }
     }
 }

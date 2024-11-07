@@ -14,7 +14,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("ApiTallerDelChipAlClick")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+9a76d82c019fd336bf9b93e3e1d35dbe7479c076")]
 [assembly: System.Reflection.AssemblyProductAttribute("ApiTallerDelChipAlClick")]
 [assembly: System.Reflection.AssemblyTitleAttribute("ApiTallerDelChipAlClick")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]
